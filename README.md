@@ -5,3 +5,6 @@ make web ui with vue.js v2
  * [Vue.js——60分钟快速入门](http://www.cnblogs.com/keepfool/p/5619070.html)
  * [Vue2教程](http://www.runoob.com/vue2/vue-tutorial.html)
  * [Vue2学习笔记](http://wiki.li3huo.com/Vue.js)
+
+## Cookbook
+ * [a CMS-Powered Blog](https://vuejs.org/v2/cookbook/serverless-blog.html) quickly build a CMS-powered blog with Vue.js.
