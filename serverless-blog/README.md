@@ -4,6 +4,14 @@
 
 ## Initialize
 
+### 注册 [buttercms](https://buttercms.com/home/) 账号
+
+* Define Page Type
+* Create Page
+* Integrate your app
+
+### 创建 `serverless-blog` 项目
+
 ```bash
 ➜  vue-starter git:(master) ✗ vue -V
 2.9.3
@@ -41,14 +49,23 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## Cookbook
 
-### Reference
+* [Build a CMS-powered blog with Vue.js](https://buttercms.com/docs/api-client/vuejs#Blogging)
+* [API Reference](https://buttercms.com/docs/api/)
+* [Tutorial](https://github.com/ButterCMS/buttercms-vue-tutorial)
+* [blog-template](https://github.com/ButterCMS/blog-template)
 
-* [buttercms api doc](https://buttercms.com/docs/api-client/vuejs)
-* [sample code](https://github.com/ButterCMS/buttercms-vue-tutorial)
+### 1. Display posts
 
-### Display posts
+To display posts we create a simple /blog route (using vue-router) in our app and fetch blog posts from the Butter API, as well as a /blog/:slug route to handle individual posts.
 
 * create `src/buttercms.js`
+
+```js
+import Butter from "buttercms";
+export const butter = Butter("your_api_token");
+
+```
+
 * update `router/index.js`
 
 ```diff
@@ -83,9 +100,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 * create `src/components/BlogHome.vue` lists most recent posts
 * create `src/components/BlogPost.vue` list a single post
 
-###
+访问： `http://localhost:8080/blog/`
 
-### Update the routes in app
+### 2. Display customers
+
+#### 2.1 Update the routes in app
 
 `router/index.js`
 
@@ -119,9 +138,12 @@ $ git diff src/router/index.js
  });
 ```
 
-#### Add Pages
+#### 2.2 Add Pages
 
-* `src/components/CustomersHome.vue`
-* `src/components/CustomerPage`
+* `src/components/CustomersHome.vue` List customers
+* `src/components/CustomerPage` View a customer
 
-###
+访问： `http://localhost:8080/customers/`
+
+### 3. 
+

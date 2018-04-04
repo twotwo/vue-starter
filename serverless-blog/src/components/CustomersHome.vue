@@ -45,7 +45,7 @@ export default {
     // Get List of Customer Pages
     getPages() {
       butter.page.list("customer_case_study").then(res => {
-        // console.log(res.data.data) // Check the results in the console
+        console.log(res.data.data) // Check the results in the console
         this.pages = res.data.data;
       });
     }
