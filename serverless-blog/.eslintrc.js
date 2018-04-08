@@ -27,6 +27,8 @@ module.exports = {
     "init-declarations": "off",
     "space-before-function-paren": "off",
     "no-inline-comments": "off",
+    "eol-last": "off",
+    "no-tabs": "off",
     "semi": "off",
     "indent": "off",
     "quotes": "off"

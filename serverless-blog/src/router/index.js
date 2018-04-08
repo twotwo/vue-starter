@@ -1,6 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
+// Test Content
+import Test from "@/components/Test/Index.vue";
+import TestLoop from "@/components/Test/TestLoop.vue";
+
 import BlogHome from "@/components/BlogHome";
 import BlogPost from "@/components/BlogPost";
 import CustomersHome from "@/components/CustomersHome";
@@ -15,6 +19,12 @@ export default new Router({
       path: "/",
       name: "HelloWorld",
       component: HelloWorld
+    },
+    {
+      path: "/test/",
+      name: "test-home",
+      component: Test,
+      children: [{ path: "loop", component: TestLoop }]
     },
     {
       path: "/blog/",

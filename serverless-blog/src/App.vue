@@ -1,19 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <common-header></common-header>
+    <common-nav></common-nav>
     <router-view/>
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
+import CommonHeader from '@/components/CommonHeader.vue'
+import CommonNav from '@/components/CommonNav.vue'
+import CommonFooter from '@/components/CommonFooter.vue'
 export default {
-  name: 'App'
-}
+  name: "App",
+  components: {
+    CommonHeader,
+    CommonNav,
+    CommonFooter
+  }
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
