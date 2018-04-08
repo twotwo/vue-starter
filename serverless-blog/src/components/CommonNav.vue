@@ -38,5 +38,5 @@ export default {
 </script>
 
 <style>
-
+@import "../assets/css/bulma.min.css";
 </style>
