@@ -1,5 +1,5 @@
 <template>
-  <div>    
+  <div>
     <ul class="head-style">
       <li>Hello, nickname!</li>
       <li><router-link class="navbar-item" to="/login">Login</router-link></li>
