@@ -11,8 +11,8 @@
           <router-link class="navbar-item" to="/test">
             Test Vue.js
           </router-link>
-          <router-link class="navbar-item" to="/faq">
-            FAQ
+          <router-link class="navbar-item" to="/customers">
+            Customers
           </router-link>
           <router-link class="navbar-item" to="/blog">
             Blog Posts

@@ -104,6 +104,12 @@ export const butter = Butter("your_api_token");
 
 ### 2. Display customers
 
+[Creating pages](https://buttercms.com/docs/api-client/vuejs#CreatingPages)
+
+1) Define the Page Type
+2) Create a page
+3) Integrate into your application
+
 #### 2.1 Update the routes in app
 
 `router/index.js`

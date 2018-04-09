@@ -1,10 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
-// Test Content
 import Test from "@/components/Test/Index.vue";
-import Quickstart from "@/components/Test/Quickstart.vue";
-
 import BlogHome from "@/components/BlogHome";
 import BlogPost from "@/components/BlogPost";
 import CustomersHome from "@/components/CustomersHome";
@@ -23,8 +20,7 @@ export default new Router({
     {
       path: "/test/",
       name: "test-home",
-      component: Test,
-      children: [{ path: "start", component: Quickstart }]
+      component: Test
     },
     {
       path: "/blog/",

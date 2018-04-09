@@ -10,38 +10,54 @@
 				<!--click事件使用内联语句-->
 				<button v-on:click="say('Hi')">Hi</button>
 			</p>
-   </div>
-   <div>
-    <ol>
-      <li v-for="site in sites" :key="site.id">
-        {{ site.name }}
-      </li>
-    </ol>
- </div>
- </div>
+    </div>
+    <div>
+      <ol>
+        <li v-for="site in sites" :key="site.id">
+          {{ site.name }}
+        </li>
+      </ol>
+    </div>
+    <div id="example">
+      <button @click="change">切换页面</button>
+      <component :is="currentView"></component>
+    </div>
+  </div>
 </template>
 
 <script>
-import TestLoop from "./TestLoop.vue";
+import TestLoop from "@/components/Test/TestLoop.vue";
+import Quickstart from "@/components/Test/Quickstart.vue";
 export default {
   name: "List",
   components: {
-    TestLoop
+    TestLoop,
+    Quickstart
   },
   data() {
     return {
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }],
-      message: 'Hello, Vue.js!'
+      message: "Hello, Vue.js!",
+      index: 0,
+      children: [TestLoop, Quickstart]
     };
+  },
+  computed: {
+    currentView() {
+      return this.children[this.index];
+    }
   },
   // 在 `methods` 对象中定义方法
   methods: {
-    greet: function() {
+    greet() {
       // // 方法内 `this` 指向 vm
       alert(this.message);
     },
-    say: function(msg) {
+    say(msg) {
       alert(msg);
+    },
+    change() {
+      this.index = ++this.index % this.children.length;
     }
   }
 };
