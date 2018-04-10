@@ -110,6 +110,8 @@ export const butter = Butter("your_api_token");
 2) Create a page
 3) Integrate into your application
 
+[ButterCMS API reference](https://buttercms.com/docs/api/?shell#pages)
+
 #### 2.1 Update the routes in app
 
 `router/index.js`
@@ -151,5 +153,11 @@ $ git diff src/router/index.js
 
 访问： `http://localhost:8080/customers/`
 
-### 3. 
+### 3. Unit Testing
 
+* [Unit Testing](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html)
+* [Guides](https://vue-test-utils.vuejs.org/en/guides/)
+
+#### 3.1 `src/components/CustomersHome.vue`
+
+`test/unit/specs/HelloWorld.spec.js`
