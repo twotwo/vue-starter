@@ -28,18 +28,17 @@
 <script>
 import TestLoop from "@/components/Test/TestLoop.vue";
 import Quickstart from "@/components/Test/Quickstart.vue";
+import Components from "@/components/Test/Components.vue";
+let children = [TestLoop, Quickstart, Components];
 export default {
   name: "List",
-  components: {
-    TestLoop,
-    Quickstart
-  },
+  components: children,
   data() {
     return {
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }],
       message: "Hello, Vue.js!",
       index: 0,
-      children: [TestLoop, Quickstart]
+      children: children
     };
   },
   computed: {
