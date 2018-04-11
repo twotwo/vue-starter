@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "v-for test",
+  name: "test-loop",
   data() {
     return {
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }]

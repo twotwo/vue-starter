@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
 import Test from "@/components/Test/Index.vue";
+import Test1 from "@/components/Test.vue";
 import BlogHome from "@/components/BlogHome";
 import BlogPost from "@/components/BlogPost";
 import CustomersHome from "@/components/CustomersHome";
@@ -11,8 +12,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "HelloWorld",
       component: HelloWorld
@@ -21,6 +21,11 @@ export default new Router({
       path: "/test/",
       name: "test-home",
       component: Test
+    },
+    {
+      path: "/test1/",
+      name: "test-home1",
+      component: Test1
     },
     {
       path: "/blog/",

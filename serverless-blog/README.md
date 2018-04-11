@@ -63,7 +63,6 @@ To display posts we create a simple /blog route (using vue-router) in our app an
 ```js
 import Butter from "buttercms";
 export const butter = Butter("your_api_token");
-
 ```
 
 * update `router/index.js`
@@ -106,9 +105,9 @@ export const butter = Butter("your_api_token");
 
 [Creating pages](https://buttercms.com/docs/api-client/vuejs#CreatingPages)
 
-1) Define the Page Type
-2) Create a page
-3) Integrate into your application
+1.  Define the Page Type
+2.  Create a page
+3.  Integrate into your application
 
 [ButterCMS API reference](https://buttercms.com/docs/api/?shell#pages)
 
@@ -165,5 +164,5 @@ $ git diff src/router/index.js
 ## Vue 框架学习
 
 ### 动态组件
-在交互中经常会遇见需要在两个或多个UI元素之前进行交替切换，Vue中保留了一个 `<component>` 元素，通过动态绑定到其 `is` 属性上，可以很方便的实现让多个组件挂载到同一个挂载点上，而且每次只有一个组件时显示在界面上的。在Vue的概念中被称作是动态组件。
 
+在交互中经常会遇见需要在两个或多个 UI 元素之前进行交替切换，Vue 中保留了一个 `<component>` 元素，通过动态绑定到其 `is` 属性上，可以很方便的实现让多个组件挂载到同一个挂载点上，而且每次只有一个组件时显示在界面上的。在 Vue 的概念中被称作是动态组件。
