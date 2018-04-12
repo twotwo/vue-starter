@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import CommonHeader from '@/components/CommonHeader.vue'
-import CommonNav from '@/components/CommonNav.vue'
-import CommonFooter from '@/components/CommonFooter.vue'
+import CommonHeader from "@/components/CommonHeader.vue";
+import CommonNav from "@/components/CommonNav.vue";
+import CommonFooter from "@/components/CommonFooter.vue";
 export default {
   name: "App",
   components: {

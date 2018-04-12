@@ -166,3 +166,35 @@ $ git diff src/router/index.js
 ### 动态组件
 
 在交互中经常会遇见需要在两个或多个 UI 元素之前进行交替切换，Vue 中保留了一个 `<component>` 元素，通过动态绑定到其 `is` 属性上，可以很方便的实现让多个组件挂载到同一个挂载点上，而且每次只有一个组件时显示在界面上的。在 Vue 的概念中被称作是动态组件。
+
+### 4. Apply CSS Framework(use Metro 4) //don't work
+
+* [Getting started](https://metroui.org.ua/vuejs.html)
+
+* [Metro 4](https://www.npmjs.com/package/metro4)
+* [JQuery](https://www.npmjs.com/package/jquery) // Metro 4 requires jQuery!
+
+```bash
+➜  serverless-blog git:(master) ✗ cnpm i metro4 --save #cnpm会安装JQuery
+```
+
+* add meta tag to `index.html`
+* add mounted to `src/App.vue`
+* add `"main": "./js/metro.js",` to `node_modules/metro4/package.json`
+
+### 5. Apply CSS Framework(use Vuetify)
+
+* [Getting started](https://vuetifyjs.com/zh-Hans/getting-started/quick-start)
+
+```bash
+➜  serverless-blog git:(master) ✗ npm i vuetify --save
+```
+
+* import `Vuetify` to `src/main.js`
+* import CSS to `src/main.js`
+
+[npm search ](https://www.npmjs.com/search) for `keywords:css framework`
+
+#### 5.1 tabs - navi bar
+
+components/[tabs](https://vuetifyjs.com/zh-Hans/components/tabs)

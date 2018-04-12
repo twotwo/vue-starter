@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "buttercms": "^1.1.1",
+    "metro4": "^4.1.13",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.0.14"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
