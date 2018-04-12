@@ -11,24 +11,24 @@ import CustomerPage from "@/components/CustomerPage";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
-  routes: [{
+  routes: [
+    {
       path: "/",
       name: "HelloWorld",
       component: HelloWorld
     },
     {
-      path: "/test/",
+      path: "/test",
       name: "test-home",
       component: Test
     },
     {
-      path: "/test1/",
+      path: "/test1",
       name: "test-home1",
       component: Test1
     },
     {
-      path: "/blog/",
+      path: "/blog",
       name: "blog-home",
       component: BlogHome
     },
@@ -38,7 +38,7 @@ export default new Router({
       component: BlogPost
     },
     {
-      path: "/customers/",
+      path: "/customers",
       name: "customers-home",
       component: CustomersHome
     },
