@@ -5,6 +5,16 @@
     <div><v-btn color="info" round href="#/test">Test Vue.js</v-btn></div>
     <div><v-btn color="info" round href="#/customers">Customers</v-btn></div>
     <div><v-btn color="info" round href="#/blog">Blog Posts</v-btn></div>
+    <div><v-btn color="info" round href="#/test1">TT</v-btn></div>
+    <v-tab-item
+      v-for="i in 5"
+      :key="i"
+      :id="'tab-' + i"
+    >
+      <v-card flat>
+        <v-card-text>{{ text }}</v-card-text>
+      </v-card>
+    </v-tab-item>
   </v-tabs>
 </template>
 

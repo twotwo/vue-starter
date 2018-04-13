@@ -193,8 +193,24 @@ $ git diff src/router/index.js
 * import `Vuetify` to `src/main.js`
 * import CSS to `src/main.js`
 
-[npm search ](https://www.npmjs.com/search) for `keywords:css framework`
+[npm search](https://www.npmjs.com/search) for `keywords:css framework`
 
 #### 5.1 tabs - navi bar
 
-components/[tabs](https://vuetifyjs.com/zh-Hans/components/tabs)
+* components/[tabs](https://vuetifyjs.com/zh-Hans/components/tabs)
+* 效果 `src/components/CommonNav.vue`
+
+#### 5.2 footer
+
+* components/[footer](https://vuetifyjs.com/zh-Hans/components/footer)
+* 效果 `src/components/CommonFooter.vue`
+
+#### 5.3 chips - header
+
+* components/[chips](https://vuetifyjs.com/en/components/chips)
+* 效果 `src/components/CommonHeader.vue`
+
+#### 5.4 selects
+
+* components/Inputs & controls/[selects](https://vuetifyjs.com/en/components/selects)
+* 效果 `src/components/CommonHeader.vue`

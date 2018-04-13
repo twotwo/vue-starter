@@ -5,7 +5,7 @@
       <hr>
       <span>请选择展示的测试 {{ selected.name }}</span>
       <select v-model="selected">
-        <option v-for="option in children" v-bind:value="option" :key="option.name">
+        <option v-for="option in components" v-bind:value="option" :key="option.name">
           {{ option}}
         </option>
       </select>
@@ -32,7 +32,7 @@ export default {
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }],
       message: "Hello, Vue.js!",
       index: 0,
-      children: Object.keys(children),
+      components: Object.keys(children),
       selected: TestLoop
     };
   },

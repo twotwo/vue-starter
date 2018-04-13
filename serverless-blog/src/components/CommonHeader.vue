@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <ul class="head-style">
-      <li>Hello, nickname!</li>
-      <li><router-link class="navbar-item" to="/login">Login</router-link></li>
-      <li><router-link class="navbar-item" to="/info">User Info</router-link></li>
-    </ul>
+  <div style="display: flex; justify-content: flex-end">
+    <div class="text-xs-center">
+      <v-chip outline color="green" text-color="white"><router-link to="/login">Login</router-link></v-chip>
+
+      <v-chip outline color="green" text-color="white">
+        <router-link to="/info">User Info</router-link>
+      </v-chip>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -15,10 +18,5 @@ export default {
 </script>
 
 <style scoped>
-.head-style {
-  text-align: right;
-}
-.head-style li {
-  display: inline-block;
-}
+
 </style>

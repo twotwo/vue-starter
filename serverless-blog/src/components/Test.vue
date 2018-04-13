@@ -3,13 +3,32 @@
     <div class="container">
       <h1 class="is-size-1">{{ page_title }}</h1>
       <hr>
-      <span>请选择展示的测试 {{ selected.name }}</span>
+    </div>
+    <div>
+      <span>请选择展示的测试 <strong>{{ selected.name }}</strong></span>
       <select v-model="selected">
-        <option v-for="option in children" v-bind:value="option" :key="option.name">
-          {{ option}}
+        <option v-for="item in items" v-bind:value="item" :key="item.name">
+          {{ item }}
         </option>
       </select>
     </div>
+    <v-container fluid>
+      <v-layout row wrap>
+        <v-flex xs6>
+          <v-subheader>请选择展示的测试组件： <strong>{{ selected.name }}</strong></v-subheader>
+        </v-flex>
+        <v-flex xs6>
+          <v-select
+            :items="items"
+            v-model="selected"
+            label="Select"
+            single-line
+            item-text="name"
+            return-object
+          ></v-select>
+        </v-flex>
+      </v-layout>
+    </v-container>
 		<div><component :is="selected"></component></div>
   </div>
 </template>
@@ -31,9 +50,8 @@ export default {
       page_title: "Test with Vue.js",
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }],
       message: "Hello, Vue.js!",
-      index: 0,
-      children: Object.keys(children),
-      selected: TestLoop
+      items: Object.keys(children),
+      selected: Components
     };
   },
   // computed: {
@@ -52,9 +70,5 @@ export default {
 </script>
 
 <style scoped>
-.test-home {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
+
 </style>
