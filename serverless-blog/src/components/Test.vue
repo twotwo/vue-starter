@@ -5,30 +5,14 @@
       <hr>
     </div>
     <div>
-      <span>请选择展示的测试 <strong>{{ selected.name }}</strong></span>
+      <span>请选择展示的测试组件： <strong>{{ selected.name }}</strong></span>
       <select v-model="selected">
         <option v-for="item in items" v-bind:value="item" :key="item.name">
           {{ item }}
         </option>
       </select>
     </div>
-    <v-container fluid>
-      <v-layout row wrap>
-        <v-flex xs6>
-          <v-subheader>请选择展示的测试组件： <strong>{{ selected.name }}</strong></v-subheader>
-        </v-flex>
-        <v-flex xs6>
-          <v-select
-            :items="items"
-            v-model="selected"
-            label="Select"
-            single-line
-            item-text="name"
-            return-object
-          ></v-select>
-        </v-flex>
-      </v-layout>
-    </v-container>
+
 		<div><component :is="selected"></component></div>
   </div>
 </template>
@@ -37,10 +21,12 @@
 import TestLoop from "@/components/Test/TestLoop.vue";
 import Quickstart from "@/components/Test/Quickstart.vue";
 import Components from "@/components/Test/Components.vue";
+import Selects from "@/components/vuetify/Selects.vue";
 let children = {
   TestLoop,
   Quickstart,
-  Components
+  Components,
+  Selects
 };
 export default {
   name: "List",

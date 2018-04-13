@@ -213,4 +213,4 @@ $ git diff src/router/index.js
 #### 5.4 selects
 
 * components/Inputs & controls/[selects](https://vuetifyjs.com/en/components/selects)
-* 效果 `src/components/CommonHeader.vue`
+* 效果 `@/components/vuetify/Selects.vue`

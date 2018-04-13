@@ -3,13 +3,16 @@
     <div class="container">
       <h1 class="is-size-1">{{ page_title }}</h1>
       <hr>
-      <span>请选择展示的测试 {{ selected.name }}</span>
+    </div>
+    <div>
+      <span>请选择展示的测试组件： <strong>{{ selected.name }}</strong></span>
       <select v-model="selected">
-        <option v-for="option in components" v-bind:value="option" :key="option.name">
-          {{ option}}
+        <option v-for="item in items" v-bind:value="item" :key="item.name">
+          {{ item }}
         </option>
       </select>
     </div>
+
 		<div><component :is="selected"></component></div>
   </div>
 </template>
@@ -18,10 +21,12 @@
 import TestLoop from "@/components/Test/TestLoop.vue";
 import Quickstart from "@/components/Test/Quickstart.vue";
 import Components from "@/components/Test/Components.vue";
+import Selects from "@/components/vuetify/Selects.vue";
 let children = {
   TestLoop,
   Quickstart,
-  Components
+  Components,
+  Selects
 };
 export default {
   name: "List",
@@ -31,9 +36,8 @@ export default {
       page_title: "Test with Vue.js",
       sites: [{ name: "Runoob" }, { name: "Google" }, { name: "Taobao" }],
       message: "Hello, Vue.js!",
-      index: 0,
-      components: Object.keys(children),
-      selected: TestLoop
+      items: Object.keys(children),
+      selected: Components
     };
   },
   // computed: {
@@ -52,9 +56,5 @@ export default {
 </script>
 
 <style scoped>
-.test-home {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
+
 </style>

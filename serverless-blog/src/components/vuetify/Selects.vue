@@ -1,0 +1,44 @@
+<template>
+  <v-container fluid>
+    <a href="https://github.com/vuetifyjs/vuetifyjs.com/blob/master/examples/selects/customTextAndValue.vue">customTextAndValue.vue</a>
+    <v-layout row wrap>
+      <v-flex xs6>
+        <v-subheader>Custom items</v-subheader>
+      </v-flex>
+      <v-flex xs6>
+        <v-select
+          :items="items"
+          v-model="select"
+          label="Select"
+          single-line
+          item-text="state"
+          item-value="abbr"
+          return-object
+          :hint="`${select.state}, ${select.abbr}`"
+          persistent-hint
+        ></v-select>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      select: { state: "Florida", abbr: "FL" },
+      items: [
+        { state: "Florida", abbr: "FL" },
+        { state: "Georgia", abbr: "GA" },
+        { state: "Nebraska", abbr: "NE" },
+        { state: "California", abbr: "CA" },
+        { state: "New York", abbr: "NY" }
+      ]
+    };
+  }
+};
+</script>
+
+<style scoped>
+
+</style>
