@@ -205,9 +205,9 @@ $ git diff src/router/index.js
 * components/[footer](https://vuetifyjs.com/zh-Hans/components/footer)
 * 效果 `src/components/CommonFooter.vue`
 
-#### 5.3 chips - header
+#### 5.3 toolbars - header
 
-* components/[chips](https://vuetifyjs.com/en/components/chips)
+* components/[toolbars](https://vuetifyjs.com/en/components/toolbars)
 * 效果 `src/components/CommonHeader.vue`
 
 #### 5.4 selects
