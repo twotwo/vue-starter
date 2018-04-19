@@ -46,8 +46,24 @@ router.js <== router/index.js # 路由
 
 ### 3.1 页面添加 header - toolbar
 
-* components/[toolbars](https://vuetifyjs.com/en/components/toolbars)
-* `src/App.vue`
+* `src/App.vue` 删掉初始内容，重新添加 toolbar 相关内容
+* Components/[toolbars](https://vuetifyjs.com/en/components/toolbars) with title and items
+* Components/[buttons](https://vuetifyjs.com/zh-Hans/components/buttons)
+* Layout/[grid](https://vuetifyjs.com/en/layout/grid#example-spacer)
+* [Material Icons](https://material.io/icons/)
+
+### 3.2 页面添加 左侧导航 - navigation-drawer
+
+* `src/App.vue` 在 toolbar 下写导航抽屉
+* Components/[Navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers)
+* Layout/[display](https://vuetifyjs.com/en/layout/display) 展示控制
+
+### 3.3 网站颜色和主题
+
+* `src/App.vue` 在 toolbar 上添加颜色; 两种theme，dark和默认的light
+* Styles/[colors](https://vuetifyjs.com/en/style/colors)
+* `src/main.js` 定制主题， class="cyan darken-3" => class="primary"
+* Styles/[theme](https://vuetifyjs.com/en/style/theme)
 
 ## 附录-参考文献
 
@@ -59,8 +75,8 @@ router.js <== router/index.js # 路由
 ### Tutorials on YouTube
 
 1. [Planning the App](https://www.youtube.com/watch?v=dIkPb8krORU)
-1. [Setting the Project up](https://www.youtube.com/watch?v=CM-ui3tjgdk)
-1. [First Steps with Vuetify](https://www.youtube.com/watch?v=NMFoyAnWkOE)
-1. []()
-1. []()
-1. []()
+2. [Setting the Project up](https://www.youtube.com/watch?v=CM-ui3tjgdk)
+3. [First Steps with Vuetify](https://www.youtube.com/watch?v=NMFoyAnWkOE)
+4. [Dynamic Menu](https://www.youtube.com/watch?v=e4M2MvU5QuQ)
+5. []()
+6. []()
