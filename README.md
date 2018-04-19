@@ -24,3 +24,4 @@ make web ui with vue.js v2
 ## Cookbook
 
 * [serverless-blog](./serverless-blog), a [CMS-Powered Blog](https://vuejs.org/v2/cookbook/serverless-blog.html) quickly build a CMS-powered blog with Vue.js.
+* [vuetify-tutorials](./vuetify-tutorials) Vue.js + Vuetify + MySQL 项目开发教程
