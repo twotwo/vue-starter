@@ -9,13 +9,13 @@ import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.cyan.darken3,
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
+    primary: colors.cyan.darken2,
+    secondary: colors.grey.light2,
+    accent: colors.cyan.accent1,
+    error: colors.pink.accent2,
+    info: colors.cyan,
+    success: colors.green,
+    warning: colors.orange
   }
 })
 

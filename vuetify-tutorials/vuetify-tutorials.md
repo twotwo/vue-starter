@@ -84,7 +84,7 @@ router.js <== router/index.js # 路由
 
 * `src/App.vue` 在 toolbar 上添加颜色; 两种theme，dark和默认的light
 * Styles/[colors](https://vuetifyjs.com/en/style/colors)
-* `src/main.js` 定制主题， class="cyan darken-3" => class="primary"
+* `src/main.js` 定制主题颜色， class="cyan darken-3" => class="primary"
 * Styles/[theme](https://vuetifyjs.com/en/style/theme)
 
 ### 3.3 页面添加 header - toolbar
@@ -137,6 +137,9 @@ http://localhost:8080/meetup
 * v-toolbar-title 中添加 router-link => `style="cursor: pointer"`
 
 ## 5. 首页的轮播图
+
+* `src/components/Main.vue`
+* Components/[carousels](https://vuetifyjs.com/en/components/carousels) ['kærə'sɛl] 旋转木马
 
 ## 附录-参考文献
 
