@@ -191,19 +191,27 @@ touch
 
 ### Tutorials on YouTube
 
+[Vue.js + Vuetify + Firebase Project - DevMeetup](https://www.youtube.com/watch?v=FXY1UyQfSFw&list=PL55RiY5tL51qxUbODJG9cgrsVd7ZHbPrt) 24个视频，把预告和vuetify版本升级 2 个去掉了
+
 1. [Planning the App](https://www.youtube.com/watch?v=dIkPb8krORU)
 2. [Setting the Project up](https://www.youtube.com/watch?v=CM-ui3tjgdk)
 3. [First Steps with Vuetify](https://www.youtube.com/watch?v=NMFoyAnWkOE)
 4. [Dynamic Menu](https://www.youtube.com/watch?v=e4M2MvU5QuQ)
 5. [A Carousel on the Home Page](https://youtu.be/at6QjSwKOuA)
 6. [Adding a Meetup List & Single Meetup Card](https://www.youtube.com/watch?v=AesqUS2udb4) 2017/7/24
-7. [Manage State with Vuex](https://www.youtube.com/watch?v=GcyjaJZaVLg)
-8. [Adding a "Create Meetup" Form](https://www.youtube.com/watch?v=hjqywdE2IAc)
+7. [Manage State with Vuex](https://www.youtube.com/watch?v=GcyjaJZaVLg) 2017/7/27
+8. [Adding a "Create Meetup" Form](https://www.youtube.com/watch?v=hjqywdE2IAc) 2017/7/31
 9. [Adding Date & Time Pickers](https://www.youtube.com/watch?v=mhK761NH5EA)
 10. [Adding a Date Filter (Pipe)](https://www.youtube.com/watch?v=X8mpO9Fn2_Y)
 11. [Firebase](https://www.youtube.com/watch?v=_gR-L7atGCM)
 12. [A Signup View & Form](https://www.youtube.com/watch?v=MpiMn5Bcmdg)
-13. []()
-14. []()
-15. []()
-16. []()
+13. [Adding Firebase Authentication](https://www.youtube.com/watch?v=MdZCRP2uKdE) 2017/8/10
+14. [Auth State Feedback with Vuex](https://www.youtube.com/watch?v=fuhhQFt5Ybk) 2017/8/14
+15. [Storing Data on Firebase](https://www.youtube.com/watch?v=xwx4ua056Nc) 2017/8/17
+16. [Prevent unauthenticated Access](https://www.youtube.com/watch?v=XljsGqsZyL4) 2017/8/21
+17. [Uploading Images](https://www.youtube.com/watch?v=J2Wp4_XRsWc) 2017/8/24
+18. [Editing Meetups](https://www.youtube.com/watch?v=zKRdwpMEaP8) 2017/8/28
+19. [Editing Date and Time](https://www.youtube.com/watch?v=fls6uX7WWSs) 2017/8/31
+20. [Register for Meetups](https://www.youtube.com/watch?v=d4nUU8vCT8U) 2017/9/4
+21. [Fetching User State](https://www.youtube.com/watch?v=BZ9FcjsA9ZU) 2017/9/7
+22. [Finishing Our Project](https://www.youtube.com/watch?v=0RoT17Xwj24) 2017/9/11
