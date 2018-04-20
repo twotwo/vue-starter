@@ -32,7 +32,38 @@ $ npm install
 $ npm run dev
 ```
 
-### 2.1 前端页面说明
+### 2.1 初始参数
+
+```bash
+➜  vuetify-tutorials git:(master) ✗ proxychains4 vue init vuetifyjs/webpack -y
+? Generate project in current directory? Yes
+? Project name vuetify-tutorials
+? Project description A Vue.js project
+? Author twotwo <twotwo.li@gmail.com>
+? Vue build standalone
+? Install vue-router? Yes
+? Use ESLint to lint your code? Yes
+? Pick an ESLint preset Standard
+? Set up unit tests Yes
+? Pick a test runner jest
+? Setup e2e tests with Nightwatch? No
+? Use a-la-carte components? No
+? Use custom theme? Yes
+? Should we run `npm install` for you after the project has been created? (recommended) npm
+
+   vue-cli · Generated "vuetify-tutorials".
+...
+# Project initialization finished!
+# ========================
+
+To get started:
+
+  npm run dev
+
+Documentation can be found at https://vuejs-templates.github.io/webpack
+```
+
+### 2.2 前端页面说明
 ```bash
 ➜  vuetify-tutorials git:(master) ✗ ll src
 App.vue # 页面全局显示
@@ -65,12 +96,47 @@ router.js <== router/index.js # 路由
 * `src/main.js` 定制主题， class="cyan darken-3" => class="primary"
 * Styles/[theme](https://vuetifyjs.com/en/style/theme)
 
+## 4. 动态菜单
+
+### 4.1 动态加载菜单
+`src/App.vue`
+
+1. `<script>` 中添加 menuItems
+2. v-list-tile 中添加 v-for
+3. v-btn 中添加 v-for
+
+### 4.2 添加页面
+
+* `src/components/Main.vue`
+* `src/components/Meetup/CreateMeetup.vue`
+* `src/components/Meetup/Meetups.vue`
+* `src/components/User/Profile.vue`
+* `src/components/User/Signin.vue`
+* `src/components/User/Signup.vue`
+
+### 4.3 添加路由
+
+* `src/routes.js` 不用# => `mode: 'history'`
+* `src/App.vue` 添加 <router-view/>
+* `config/index.js` 设置web context => `assetsPublicPath: '/meetup'`
+
+http://localhost:8080/meetup
+
+### 4.4 菜单中添加地址
+
+`src/App.vue`
+
+* v-toolbar-title 中添加 router-link => `style="cursor: pointer"`
+
+## 5. 首页的轮播图
+
 ## 附录-参考文献
 
 ### 官方文档
 
 * [https://vuetifyjs.com](https://vuetifyjs.com)
-* [awesome-vuetify@github](https://github.com/vuetifyjs/awesome-vuetify)
+* [awesome-vuetify@github](https://github.com/vuetifyjs/awesome-vuetify) Vuetify.js 官方推荐资源
+* [Tutorials@github](https://github.com/academind/yt-devmeetup-vue-firebase) YouTube教学视频的源代码
 
 ### Tutorials on YouTube
 
@@ -78,5 +144,14 @@ router.js <== router/index.js # 路由
 2. [Setting the Project up](https://www.youtube.com/watch?v=CM-ui3tjgdk)
 3. [First Steps with Vuetify](https://www.youtube.com/watch?v=NMFoyAnWkOE)
 4. [Dynamic Menu](https://www.youtube.com/watch?v=e4M2MvU5QuQ)
-5. []()
-6. []()
+5. [A Carousel on the Home Page](https://youtu.be/at6QjSwKOuA)
+6. [Manage State with Vuex](https://www.youtube.com/watch?v=GcyjaJZaVLg)
+7. [Adding a "Create Meetup" Form](https://www.youtube.com/watch?v=hjqywdE2IAc)
+8. [Adding Date & Time Pickers](https://www.youtube.com/watch?v=mhK761NH5EA)
+9. [Adding a Date Filter (Pipe)](https://www.youtube.com/watch?v=X8mpO9Fn2_Y)
+10. [Firebase](https://www.youtube.com/watch?v=_gR-L7atGCM)
+11. [A Signup View & Form](https://www.youtube.com/watch?v=MpiMn5Bcmdg)
+12. []()
+13. []()
+14. []()
+15. []()
