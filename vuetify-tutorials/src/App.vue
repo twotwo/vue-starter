@@ -1,29 +1,10 @@
 <template>
   <v-app>
-    <!-- my-header begin -->
-    <v-toolbar dark class="primary">
-      <v-toolbar-side-icon 
-        @click="sideNav = !sideNav"
-        class="hidden-sm-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title>
-        <router-link to="/" tag="span" style="cursor: pointer">DevMeetup</router-link>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
-        <v-btn 
-        flat 
-        v-for="item in menuItems" 
-        :key="item.title"
-        router
-        :to="item.link">
-          <v-icon left>{{ item.icon }}</v-icon>
-          {{ item.title }}
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
-    <!-- my-header end -->
     <!-- left navi-bar begin -->
-    <v-navigation-drawer temporary v-model="sideNav">
+    <v-navigation-drawer
+      app
+      temporary 
+      v-model="sideNav">
       <v-list>
         <v-list-tile 
         v-for="item in menuItems" 
@@ -38,9 +19,39 @@
       </v-list>
     </v-navigation-drawer>
     <!-- left navi-bar end -->
-    <main>
-      <router-view/>
-    </main>
+
+    <!-- my-header begin -->
+    <v-toolbar app dark class="primary">
+      <v-toolbar-side-icon 
+        @click="sideNav = !sideNav"
+        class="hidden-sm-and-up">
+      </v-toolbar-side-icon>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" style="cursor: pointer">DevMeetup</router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn 
+        flat 
+        v-for="item in menuItems"
+        :key="item.title"
+        router
+        :to="item.link">
+          <v-icon left>{{ item.icon }}</v-icon>
+          {{ item.title }}
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <!-- my-header end -->
+    
+    <!-- main content here-->
+    <v-content>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
+    </v-content>
+    <!-- footer here -->
+    <v-footer app>Copyright</strong> © 2018.</v-footer>
   </v-app>
 </template>
 

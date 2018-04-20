@@ -75,7 +75,12 @@ router.js <== router/index.js # 路由
 
 ## 3. Vuetify 起步
 
-### 3.1 页面添加 header - toolbar
+### 3.1 网站布局(layout)
+
+* `src/App.vue` app: {navigation, toolbar, content, footer}
+* Layout/[Default application markup](https://vuetifyjs.com/zh-Hans/layout/pre-defined) 
+
+### 3.2 页面添加 header - toolbar
 
 * `src/App.vue` 删掉初始内容，重新添加 toolbar 相关内容
 * Components/[toolbars](https://vuetifyjs.com/en/components/toolbars) with title and items
@@ -83,13 +88,13 @@ router.js <== router/index.js # 路由
 * Layout/[grid](https://vuetifyjs.com/en/layout/grid#example-spacer)
 * [Material Icons](https://material.io/icons/)
 
-### 3.2 页面添加 左侧导航 - navigation-drawer
+### 3.3 页面添加 左侧导航 - navigation-drawer
 
 * `src/App.vue` 在 toolbar 下写导航抽屉
 * Components/[Navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers)
 * Layout/[display](https://vuetifyjs.com/en/layout/display) 展示控制
 
-### 3.3 网站颜色和主题
+### 3.4 网站颜色和主题
 
 * `src/App.vue` 在 toolbar 上添加颜色; 两种theme，dark和默认的light
 * Styles/[colors](https://vuetifyjs.com/en/style/colors)
