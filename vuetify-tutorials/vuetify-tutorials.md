@@ -152,6 +152,35 @@ http://localhost:8080/meetup
 
 使用 carousels 组件
 
+## 6. 聚会列表及详情
+
+### 6.1 Meetups.vue
+
+* Components/[cards](https://vuetifyjs.com/zh-Hans/components/cards)
+* Layout/[间距](https://vuetifyjs.com/zh-Hans/layout/spacing)
+* [Material Icons](https://material.io/icons/)
+* Layout/[偏移](https://vuetifyjs.com/zh-Hans/layout/grid#offset)
+
+### 6.2 Meetup.vue及路由
+
+* `src/components/Meetup/Meetup.vue`
+* `src/routers.js`
+
+### 6.3 在 Home.vue 上添加点击
+
+* line 18: `@click="onLoadMeetup(meetup.id)"`
+* line 54: `methods...` //目前点击不生效...
+* line 13: `style="cursor: pointer;` //add pointer to carousel
+
+## 7. 使用 Vuex 管理状态
+
+### 7.1 安装与引入
+
+```bash
+
+touch
+```
+
 ## 附录-参考文献
 
 ### 官方文档
@@ -167,13 +196,14 @@ http://localhost:8080/meetup
 3. [First Steps with Vuetify](https://www.youtube.com/watch?v=NMFoyAnWkOE)
 4. [Dynamic Menu](https://www.youtube.com/watch?v=e4M2MvU5QuQ)
 5. [A Carousel on the Home Page](https://youtu.be/at6QjSwKOuA)
-6. [Manage State with Vuex](https://www.youtube.com/watch?v=GcyjaJZaVLg)
-7. [Adding a "Create Meetup" Form](https://www.youtube.com/watch?v=hjqywdE2IAc)
-8. [Adding Date & Time Pickers](https://www.youtube.com/watch?v=mhK761NH5EA)
-9. [Adding a Date Filter (Pipe)](https://www.youtube.com/watch?v=X8mpO9Fn2_Y)
-10. [Firebase](https://www.youtube.com/watch?v=_gR-L7atGCM)
-11. [A Signup View & Form](https://www.youtube.com/watch?v=MpiMn5Bcmdg)
-12. []()
+6. [Adding a Meetup List & Single Meetup Card](https://www.youtube.com/watch?v=AesqUS2udb4) 2017/7/24
+7. [Manage State with Vuex](https://www.youtube.com/watch?v=GcyjaJZaVLg)
+8. [Adding a "Create Meetup" Form](https://www.youtube.com/watch?v=hjqywdE2IAc)
+9. [Adding Date & Time Pickers](https://www.youtube.com/watch?v=mhK761NH5EA)
+10. [Adding a Date Filter (Pipe)](https://www.youtube.com/watch?v=X8mpO9Fn2_Y)
+11. [Firebase](https://www.youtube.com/watch?v=_gR-L7atGCM)
+12. [A Signup View & Form](https://www.youtube.com/watch?v=MpiMn5Bcmdg)
 13. []()
 14. []()
 15. []()
+16. []()
