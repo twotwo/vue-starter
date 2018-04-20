@@ -27,7 +27,9 @@
       </v-list>
     </v-navigation-drawer>
     <!-- left navi-bar end -->
-    <main></main>
+    <main>
+      <router-view/>
+    </main>
   </v-app>
 </template>
 
