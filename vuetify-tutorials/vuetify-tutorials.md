@@ -141,6 +141,17 @@ http://localhost:8080/meetup
 * `src/components/Main.vue`
 * Components/[carousels](https://vuetifyjs.com/en/components/carousels) ['kærə'sɛl] 旋转木马
 
+### 5.1 首页布局
+
+* Layout/[12点栅格](https://vuetifyjs.com/en/layout/grid) v-container » v-layout » v-flex
+* Layout/[显示](https://vuetifyjs.com/en/layout/grid)
+* Layout/[文本对齐](https://vuetifyjs.com/zh-Hans/layout/alignment)
+* Layout/[间距](https://vuetifyjs.com/zh-Hans/layout/spacing)
+
+### 5.2 首页轮播图
+
+使用 carousels 组件
+
 ## 附录-参考文献
 
 ### 官方文档
