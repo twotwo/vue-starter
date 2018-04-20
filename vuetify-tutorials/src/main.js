@@ -10,12 +10,12 @@ import colors from 'vuetify/es5/util/colors'
 Vue.use(Vuetify, {
   theme: {
     primary: colors.cyan.darken2,
-    secondary: colors.grey.light2,
+    secondary: colors.grey.lighten2,
     accent: colors.cyan.accent1,
     error: colors.pink.accent2,
-    info: colors.cyan,
-    success: colors.green,
-    warning: colors.orange
+    info: colors.cyan.base,
+    success: colors.green.base,
+    warning: colors.orange.base
   }
 })
 

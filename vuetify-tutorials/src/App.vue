@@ -1,25 +1,5 @@
 <template>
   <v-app>
-    <!-- left navi-bar begin -->
-    <v-navigation-drawer
-      app
-      temporary 
-      v-model="sideNav">
-      <v-list>
-        <v-list-tile 
-        v-for="item in menuItems" 
-        :key="item.title"
-        router
-        :to="item.link">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>{{ item.title }}</v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <!-- left navi-bar end -->
-
     <!-- my-header begin -->
     <v-toolbar app dark class="primary">
       <v-toolbar-side-icon 
@@ -43,6 +23,26 @@
       </v-toolbar-items>
     </v-toolbar>
     <!-- my-header end -->
+
+    <!-- left navi-bar begin -->
+    <v-navigation-drawer
+      app
+      temporary 
+      v-model="sideNav">
+      <v-list>
+        <v-list-tile 
+        v-for="item in menuItems" 
+        :key="item.title"
+        router
+        :to="item.link">
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>{{ item.title }}</v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <!-- left navi-bar end -->
     
     <!-- main content here-->
     <v-content>
@@ -50,24 +50,27 @@
         <router-view/>
       </v-container>
     </v-content>
+
     <!-- footer here -->
     <v-footer app>Copyright</strong> © 2018.</v-footer>
+
   </v-app>
 </template>
 
 <script>
 export default {
-  data () {
+  // eslint-disable-next-line
+  data() {
     return {
       sideNav: false,
       menuItems: [
-        { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
-        { icon: 'room', title: 'Organize Meetup', link: '/meetup/new' },
-        { icon: 'person', title: 'Profile', link: '/profile' },
-        { icon: 'face', title: 'Sign up', link: '/signup' },
-        { icon: 'lock_open', title: 'Sign in', link: '/signin' }
+        { icon: "supervisor_account", title: "View Meetups", link: "/meetups" },
+        { icon: "room", title: "Organize Meetup", link: "/meetup/new" },
+        { icon: "person", title: "Profile", link: "/profile" },
+        { icon: "face", title: "Sign up", link: "/signup" },
+        { icon: "lock_open", title: "Sign in", link: "/signin" }
       ]
-    }
+    };
   }
-}
+};
 </script>
