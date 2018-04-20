@@ -10,7 +10,8 @@ import Signup from '@/components/User/Signup.vue'
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
+  base: '/meetup',
   routes: [{
       path: '/',
       name: 'Home',

@@ -1,7 +1,7 @@
 # Vue.js + Vuetify + MySQL 项目开发教程
 
 ## 1. 需求与概要设计
-做一个聚会管理网站，管理员可以添加聚会信息；普通用户可以查看聚会信息。根据需求，提取出 5 张页面和 2 个数据表。
+# 做一个聚会管理网站，管理员可以添加聚会信息；普通用户可以查看聚会信息。根据需求，提取出 5 张页面和 2 个数据表。
 
 ![概要设计](./tutorials/planning-the-app.png)
 
@@ -80,7 +80,14 @@ router.js <== router/index.js # 路由
 * `src/App.vue` app: {navigation, toolbar, content, footer}
 * Layout/[Default application markup](https://vuetifyjs.com/zh-Hans/layout/pre-defined) 
 
-### 3.2 页面添加 header - toolbar
+### 3.2 网站颜色和主题
+
+* `src/App.vue` 在 toolbar 上添加颜色; 两种theme，dark和默认的light
+* Styles/[colors](https://vuetifyjs.com/en/style/colors)
+* `src/main.js` 定制主题， class="cyan darken-3" => class="primary"
+* Styles/[theme](https://vuetifyjs.com/en/style/theme)
+
+### 3.3 页面添加 header - toolbar
 
 * `src/App.vue` 删掉初始内容，重新添加 toolbar 相关内容
 * Components/[toolbars](https://vuetifyjs.com/en/components/toolbars) with title and items
@@ -88,22 +95,16 @@ router.js <== router/index.js # 路由
 * Layout/[grid](https://vuetifyjs.com/en/layout/grid#example-spacer)
 * [Material Icons](https://material.io/icons/)
 
-### 3.3 页面添加 左侧导航 - navigation-drawer
+### 3.4 页面添加 左侧导航 - navigation-drawer
 
 * `src/App.vue` 在 toolbar 下写导航抽屉
 * Components/[Navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers)
 * Layout/[display](https://vuetifyjs.com/en/layout/display) 展示控制
 
-### 3.4 网站颜色和主题
-
-* `src/App.vue` 在 toolbar 上添加颜色; 两种theme，dark和默认的light
-* Styles/[colors](https://vuetifyjs.com/en/style/colors)
-* `src/main.js` 定制主题， class="cyan darken-3" => class="primary"
-* Styles/[theme](https://vuetifyjs.com/en/style/theme)
-
 ## 4. 动态菜单
 
 ### 4.1 动态加载菜单
+
 `src/App.vue`
 
 1. `<script>` 中添加 menuItems
@@ -121,8 +122,10 @@ router.js <== router/index.js # 路由
 
 ### 4.3 添加路由
 
-* `src/routes.js` 不用# => `mode: 'history'`
+参考 [vue-router](https://router.vuejs.org/zh-cn/)
+
 * `src/App.vue` 添加 <router-view/>
+* `src/routes.js` 不用# => `mode: 'history'`, 设置web context => `base: '/meetup'`
 * `config/index.js` 设置web context => `assetsPublicPath: '/meetup'`
 
 http://localhost:8080/meetup
