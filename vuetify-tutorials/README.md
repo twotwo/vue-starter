@@ -1,6 +1,8 @@
 # vuetify-tutorials
 
-> A Vue.js project
+> Vue.js + Vuetify + MySQL 项目开发教程
+
+[教程](./vuetify-tutorials.md)
 
 ## Build Setup
 
