@@ -14,39 +14,40 @@ export default new Router({
   mode: 'history',
   base: '/meetup',
   routes: [{
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/meetups',
-      name: 'Meetups',
-      component: Meetups
-    },
-    {
-      path: '/meetup/new',
-      name: 'CreateMeetup',
-      component: CreateMeetup
-    },
-    {
-      path: '/meetups/:id',
-      name: 'Meetup',
-      component: Meetup
-    },
-    {
-      path: '/profile',
-      name: 'Profile',
-      component: Profile
-    },
-    {
-      path: '/signin',
-      name: 'Signin',
-      component: Signin
-    },
-    {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
-    }
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/meetups',
+    name: 'Meetups',
+    component: Meetups
+  },
+  {
+    path: '/meetup/new',
+    name: 'CreateMeetup',
+    component: CreateMeetup
+  },
+  {
+    path: '/meetups/:id',
+    name: 'Meetup',
+    props: true,
+    component: Meetup
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: Signin
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: Signup
+  }
   ]
 })

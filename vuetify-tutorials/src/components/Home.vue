@@ -34,22 +34,10 @@
 <script>
 export default {
   // eslint-disable-next-line
-  data() {
-    return {
-      meetups: [
-        {
-          imageUrl: "http://ryugaku.myedu.jp/images/chn/sc/pekin.jpg",
-          id: "dsfsadfdfwfew",
-          title: "聚会在北京"
-        },
-        {
-          imageUrl:
-            "https://i.travelapi.com/hotels/1000000/500000/490600/490509/490509_186_z.jpg",
-          id: "wefewfsfdsfdf",
-          title: "聚会在上海"
-        }
-      ]
-    };
+  computed: {
+    meetups () {
+      return this.$store.getters.featuredMeetups;
+    }
   },
   methods: {
     // eslint-disable-next-line

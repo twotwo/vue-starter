@@ -3,7 +3,7 @@
 ## 1. 需求与概要设计
 > 做一个聚会管理网站，管理员可以添加聚会信息；普通用户可以查看聚会信息。
 
-![概要设计](./tutorials/planning-the-app.jpg)
+![业务需求草图](./tutorials/planning-the-app.jpg)
 
 根据以上的需求，可以提取出 5 张页面和 2 个数据表。
 
@@ -179,9 +179,21 @@ http://localhost:8080/meetup
 ### 7.1 安装与引入
 
 ```bash
-
-touch
+➜  vuetify-tutorials git:(master) ✗ npm i --save vuex
+➜  vuetify-tutorials git:(master) ✗ code src/store.js
 ```
+
+Vuex.Store: state, mutations, actions, getters
+
+* `src/store.js`
+* `src/main.js` import {store} from './store.js'
+
+### 7.2 从Vuex.Store中获得聚会信息
+
+* `src/components/Home.vue`: 使用 `computed` 获取meetups
+* `src/components/Meetup/Meetups.vue`: 使用 `computed` 获取meetups，然后在 `v-layout` 上添加 `v-for`
+* `src/components/Meetup/Meetup.vue`: 获取 meetup - 使用 props 获得路由过来的 id
+* `src/router.js`: `props: true,`
 
 ## 附录-参考文献
 

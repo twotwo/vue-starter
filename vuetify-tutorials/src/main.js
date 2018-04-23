@@ -7,6 +7,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
 
+import { store } from './store.js'
+
 Vue.use(Vuetify, {
   theme: {
     primary: colors.cyan.darken2,
@@ -25,6 +27,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },

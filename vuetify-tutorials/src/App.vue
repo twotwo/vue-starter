@@ -1,5 +1,21 @@
 <template>
   <v-app>
+    <!-- left navi-bar begin -->
+    <v-navigation-drawer app temporary v-model="sideNav">
+      <v-list>
+        <v-list-tile 
+          v-for="item in menuItems" 
+          :key="item.title"
+          :to="item.link">
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>{{ item.title }}</v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <!-- left navi-bar end -->
+
     <!-- my-header begin -->
     <v-toolbar app dark class="primary">
       <v-toolbar-side-icon 
@@ -12,40 +28,21 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn 
-        flat 
-        v-for="item in menuItems"
-        :key="item.title"
-        :to="item.link">
+          flat 
+          v-for="item in menuItems"
+          :key="item.title"
+          :to="item.link">
           <v-icon left>{{ item.icon }}</v-icon>
           {{ item.title }}
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <!-- my-header end -->
-
-    <!-- left navi-bar begin -->
-    <v-navigation-drawer
-      app
-      temporary 
-      v-model="sideNav">
-      <v-list>
-        <v-list-tile 
-        v-for="item in menuItems" 
-        :key="item.title"
-        :to="item.link">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>{{ item.title }}</v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <!-- left navi-bar end -->
     
     <!-- main content here-->
     <v-content>
-      <v-container fluid>
-        <router-view/>
+      <v-container app fluid>
+        <router-view></router-view>
       </v-container>
     </v-content>
 
