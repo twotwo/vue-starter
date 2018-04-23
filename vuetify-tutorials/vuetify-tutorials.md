@@ -195,6 +195,26 @@ Vuex.Store: state, mutations, actions, getters
 * `src/components/Meetup/Meetup.vue`: 获取 meetup - 使用 props 获得路由过来的 id
 * `src/router.js`: `props: true,`
 
+### 7.3 创建聚会信息
+
+`src/components/Meetup/CreateMeetup.vue`
+
+* Components/Inputs & controls/[文本框](https://vuetifyjs.com/zh-Hans/components/text-fields)
+* `src/store.js` 添加 createMeetup。 actions.createMeetup中写死id
+
+#### 7.3.1 创建聚会信息之日期时间控件
+
+* Components/Pickers/[Date/month picker](https://vuetifyjs.com/zh-Hans/components/date-pickers)
+* Components/Pickers/[Time picker](https://vuetifyjs.com/zh-Hans/components/time-pickers)
+
+Add in `src/components/Meetup/CreateMeetup.vue`
+
+#### 7.3.2 添加日期管道
+
+## 8. 用户与权限
+
+### 8.1 用户注册
+
 ## 附录-参考文献
 
 ### 官方文档
