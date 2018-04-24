@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
         imageUrl: "http://ryugaku.myedu.jp/images/chn/sc/pekin.jpg",
         id: "dsfsadfdfwfew",
         title: "聚会在北京",
-        date: '2018-04-01',
+        date: new Date(),
         location: '北京',
         description: '聚会在北京聚会在北京!'
       },
@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
         imageUrl: "https://i.travelapi.com/hotels/1000000/500000/490600/490509/490509_186_z.jpg",
         id: "wefewfsfdsfdf",
         title: "聚会在上海",
-        date: '2018-04-02',
+        date: new Date(),
         location: '上海',
         description: '聚会在上海聚会在上海!'
       }

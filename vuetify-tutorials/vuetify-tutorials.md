@@ -210,6 +210,9 @@ Vuex.Store: state, mutations, actions, getters
 Add in `src/components/Meetup/CreateMeetup.vue`
 
 #### 7.3.2 添加日期管道
+* create `src/filter_date.js`
+* register in `src/main.js`
+* add pipeline in `src/components/Meetup/Meetups.vue`/`src/components/Meetup/Meetup.vue`
 
 ## 8. 用户与权限
 

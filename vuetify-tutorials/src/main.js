@@ -8,6 +8,7 @@ import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
 
 import { store } from './store.js'
+import DateFilter from './filter_date.js'
 
 Vue.use(Vuetify, {
   theme: {
@@ -22,6 +23,8 @@ Vue.use(Vuetify, {
 })
 
 Vue.config.productionTip = false
+
+Vue.filter('date', DateFilter)
 
 /* eslint-disable no-new */
 new Vue({
