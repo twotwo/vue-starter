@@ -218,7 +218,20 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 
 ### 8.1 用户注册
 
-## 附录-参考文献
+* create `src/components/User/Signup.vue`
+* Components/Inputs & controls/[文本框](https://vuetifyjs.com/zh-Hans/components/text-fields) rules add in Vue.computed
+
+## 附录1-Firebase相关
+
+### Authentication
+
+12. [A Signup View & Form with Firebase](https://www.youtube.com/watch?v=MpiMn5Bcmdg) 2017/8/7 `npm i firebase --save`
+
+* [创建项目](./tutorials/firebase-create-project.png)
+* [认证方法](./tutorials/firebase-authentication-method.png)
+* [认证配置](./tutorials/firebase-authentication-websetup.png) register in `src/main.js`
+
+## 附录2-参考文献
 
 ### 官方文档
 
@@ -241,7 +254,7 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 9. [Adding Date & Time Pickers](https://www.youtube.com/watch?v=mhK761NH5EA)
 10. [Adding a Date Filter (Pipe)](https://www.youtube.com/watch?v=X8mpO9Fn2_Y)
 11. [Firebase](https://www.youtube.com/watch?v=_gR-L7atGCM)
-12. [A Signup View & Form](https://www.youtube.com/watch?v=MpiMn5Bcmdg)
+12. [A Signup View & Form with Firebase](https://www.youtube.com/watch?v=MpiMn5Bcmdg) 2017/8/7 `npm i firebase --save`
 13. [Adding Firebase Authentication](https://www.youtube.com/watch?v=MdZCRP2uKdE) 2017/8/10
 14. [Auth State Feedback with Vuex](https://www.youtube.com/watch?v=fuhhQFt5Ybk) 2017/8/14
 15. [Storing Data on Firebase](https://www.youtube.com/watch?v=xwx4ua056Nc) 2017/8/17
