@@ -218,8 +218,16 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 
 ### 8.1 用户注册
 
-* create `src/components/User/Signup.vue`
+* `src/components/User/Signup.vue`
 * Components/Inputs & controls/[文本框](https://vuetifyjs.com/zh-Hans/components/text-fields) rules add in Vue.computed
+
+* 把注册信息放入 `src/store.js`: `Vuex.actions.signUserUp`/`Vuex.getters.user`
+* `src/components/User/Signup.vue` `methods.onSignup`/`computed.user` 调用 store 上的方法; `watch.user` route 到 home
+
+### 8.2 用户登录
+
+* `src/components/User/Signin.vue`
+* `src/store.js`: `Vuex.actions.signUserIn`
 
 ## 附录1-Firebase相关
 
@@ -230,6 +238,12 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 * [创建项目](./tutorials/firebase-create-project.png)
 * [认证方法](./tutorials/firebase-authentication-method.png)
 * [认证配置](./tutorials/firebase-authentication-websetup.png) register in `src/main.js`
+* `src/components/User/Signup.vue` 页面
+
+13. [Adding Firebase Authentication](https://www.youtube.com/watch?v=MdZCRP2uKdE) 2017/8/10
+
+* `src/components/User/Signup.vue` 添加用户信息到 `src/store.js` 和 firebase
+* `src/App.vue` 登录后 隐藏 Signin `computed.menuItems`
 
 ## 附录2-参考文献
 

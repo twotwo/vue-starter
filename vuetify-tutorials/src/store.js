@@ -26,12 +26,27 @@ export const store = new Vuex.Store({
     ],
     user: {
       id: '23r4few',
-      registeredMeetups: ['dsfsdf']
+      email: 'test@test.com',
+      password: '111111',
+      registeredMeetups: []
     }
   },
   mutations: {
+    /**
+     * save meetup to cache
+     * @param {*} state 
+     * @param {*} payload 
+     */
     createMeetup(state, payload) {
       state.loadedMeetups.push(payload)
+    },
+    /**
+     * save user to cache
+     * @param {*} state 
+     * @param {*} payload 
+     */
+    setUser(state, payload) {
+      state.user = payload
     }
   },
   actions: {
@@ -46,6 +61,28 @@ export const store = new Vuex.Store({
       }
       // 使用 sequelize 来持久化数据
       commit('createMeetup', meetup)
+    },
+    signUserUp({ commit }, payload) {
+      // call server create user method
+      // . then ( user ==> user.id...
+      const newUser = {
+        id: '23r4few',
+        email: payload.email,
+        password: payload.password,
+        registeredMeetups: []
+      }
+      commit('setUser', newUser)
+    },
+    signUserIn({ commit }, payload) {
+      // call server signIn method
+      // . then ( user ==> user.id...
+      const newUser = {
+        id: '23r4few',
+        email: payload.email,
+        password: payload.password,
+        registeredMeetups: []
+      }
+      commit('setUser', newUser)
     }
   },
   getters: {
@@ -63,6 +100,9 @@ export const store = new Vuex.Store({
           return meetup.id === meetupId
         })
       }
+    },
+    user(state) {
+      return state.user
     }
   }
 })
