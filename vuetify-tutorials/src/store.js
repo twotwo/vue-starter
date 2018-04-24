@@ -88,6 +88,11 @@ export const store = new Vuex.Store({
     autoSignIn({ commit }, payload) {
       commit('setUser', { id: payload.uid, registeredMeetups: [] })
     },
+    fetchUserData({ commit }, getter) {
+      commit('setLoading', true)
+      //TODO get user info from DB
+      commit('setLoading', false)
+    },
     logout({ commit }) {
       // signout from server
       commit('setUser', null)

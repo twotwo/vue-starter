@@ -237,6 +237,11 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 * `src/App.vue`: add logout menu; `methods.onLogout`
 * `src/store.js`: `Vuex.actions.logout`
 
+### 8.4 登录时获取用户数据
+
+* `src/store.js`: `Vuex.actions.fetchUserData`
+* `src/main.js`: created 的时候调用 fetchUserData
+
 ## 附录1-Firebase相关
 
 ### Authentication
@@ -296,5 +301,5 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 18. [Editing Meetups](https://www.youtube.com/watch?v=zKRdwpMEaP8) 2017/8/28
 19. [Editing Date and Time](https://www.youtube.com/watch?v=fls6uX7WWSs) 2017/8/31
 20. [Register for Meetups](https://www.youtube.com/watch?v=d4nUU8vCT8U) 2017/9/4
-21. [Fetching User State](https://www.youtube.com/watch?v=BZ9FcjsA9ZU) 2017/9/7
+21. [Fetching User State On Login](https://www.youtube.com/watch?v=BZ9FcjsA9ZU) 2017/9/7
 22. [Finishing Our Project](https://www.youtube.com/watch?v=0RoT17Xwj24) 2017/9/11

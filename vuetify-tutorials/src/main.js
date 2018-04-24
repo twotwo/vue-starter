@@ -34,5 +34,10 @@ new Vue({
   components: {
     App
   },
-  template: '<App/>'
+  template: '<App/>',
+  // eslint-disable-next-line
+  created() {
+    // On Auth State Changed
+
+  }
 })
