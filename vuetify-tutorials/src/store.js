@@ -29,7 +29,7 @@ export const store = new Vuex.Store({
       email: 'test@test.com',
       password: '111111',
       registeredMeetups: []
-    }
+    } //, user: null
   },
   mutations: {
     /**
@@ -52,12 +52,13 @@ export const store = new Vuex.Store({
   actions: {
     createMeetup({ commit }, payload) {
       const meetup = {
+        id: 'dsfasdfew324123',
         title: payload.title,
         location: payload.location,
         imageUrl: payload.imageUrl,
         description: payload.description,
-        date: payload.date,
-        id: '2frwefasdfe3'
+        date: payload.date.toISOString,
+        creatorId: getters.user.id
       }
       // 使用 sequelize 来持久化数据
       commit('createMeetup', meetup)
@@ -83,6 +84,16 @@ export const store = new Vuex.Store({
         registeredMeetups: []
       }
       commit('setUser', newUser)
+    },
+    autoSignIn({ commit }, payload) {
+      commit('setUser', { id: payload.uid, registeredMeetups: [] })
+    },
+    logout({ commit }) {
+      // signout from server
+      commit('setUser', null)
+    },
+    clearError({ commit }) {
+      commit('clearError')
     }
   },
   getters: {

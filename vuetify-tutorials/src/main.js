@@ -8,7 +8,7 @@ import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
 
 import { store } from './store.js'
-import DateFilter from './filter_date.js'
+import DateFilter from './date-filter.js'
 
 Vue.use(Vuetify, {
   theme: {

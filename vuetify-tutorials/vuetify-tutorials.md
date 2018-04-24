@@ -210,7 +210,7 @@ Vuex.Store: state, mutations, actions, getters
 Add in `src/components/Meetup/CreateMeetup.vue`
 
 #### 7.3.2 添加日期管道
-* create `src/filter_date.js`
+* create `src/date-filter.js`
 * register in `src/main.js`
 * add pipeline in `src/components/Meetup/Meetups.vue`/`src/components/Meetup/Meetup.vue`
 
@@ -227,7 +227,15 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 ### 8.2 用户登录
 
 * `src/components/User/Signin.vue`
-* `src/store.js`: `Vuex.actions.signUserIn`
+* `src/store.js`: add `Vuex.actions.signUserIn`
+
+### 8.3 避免未授权访问
+
+* create `src/auth-guard.js`
+* `src/router.js`: add ` beforeEnter: AuthGuard` for '/meetup/new' & '/profile'
+* test: user: null in `src/store.js`
+* `src/App.vue`: add logout menu; `methods.onLogout`
+* `src/store.js`: `Vuex.actions.logout`
 
 ## 附录1-Firebase相关
 
@@ -244,6 +252,17 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 
 * `src/components/User/Signup.vue` 添加用户信息到 `src/store.js` 和 firebase
 * `src/App.vue` 登录后 隐藏 Signin `computed.menuItems`
+
+14. [Auth State Feedback with Vuex](https://www.youtube.com/watch?v=fuhhQFt5Ybk) 2017/8/14
+
+16. [Prevent unauthenticated Access](https://www.youtube.com/watch?v=XljsGqsZyL4) 2017/8/21 autoSignIn
+
+* `src/main.js` firebase.auth().onAuthStateChanged
+* `src/store.js` `Vuex.actions.autoSignIn`
+
+### DB Actions
+
+15. [Storing Data on Firebase](https://www.youtube.com/watch?v=xwx4ua056Nc) 2017/8/17
 
 ## 附录2-参考文献
 
