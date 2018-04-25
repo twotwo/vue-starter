@@ -29,7 +29,10 @@ export const store = new Vuex.Store({
       email: 'test@test.com',
       password: '111111',
       registeredMeetups: []
-    } //, user: null
+    },
+    // user: null,
+    loading: false,
+    error: null
   },
   mutations: {
     /**
@@ -50,18 +53,27 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    createMeetup({ commit }, payload) {
+    createMeetup({ commit, getters }, payload) {
       const meetup = {
         id: 'dsfasdfew324123',
         title: payload.title,
         location: payload.location,
-        imageUrl: payload.imageUrl,
+        // imageUrl: payload.imageUrl,
         description: payload.description,
-        date: payload.date.toISOString,
+        date: payload.date,
         creatorId: getters.user.id
       }
       // 使用 sequelize 来持久化数据
-      commit('createMeetup', meetup)
+      // 1. 获得meetup.id
+      // 2. 上传图片
+      const filename = payload.image.name
+      const ext = filename.slice(filename.lastIndexOf('.')) //.xxx
+      // store as $base/meetups/meetup.id$ext; return download url
+      // update sequelize imageUrl
+      commit('createMeetup', {
+        ...meetup,
+        imageUrl: payload.imageUrl // replaced by server side url
+      })
     },
     signUserUp({ commit }, payload) {
       // call server create user method

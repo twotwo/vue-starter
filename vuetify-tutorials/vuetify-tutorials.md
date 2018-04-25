@@ -214,6 +214,11 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 * register in `src/main.js`
 * add pipeline in `src/components/Meetup/Meetups.vue`/`src/components/Meetup/Meetup.vue`
 
+### 7.3.3 上传图片
+
+* Components/[buttons](https://vuetifyjs.com/zh-Hans/components/buttons) raised
+* line 33,34 v-btn 和 input
+
 ## 8. 用户与权限
 
 ### 8.1 用户注册
@@ -302,4 +307,4 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 19. [Editing Date and Time](https://www.youtube.com/watch?v=fls6uX7WWSs) 2017/8/31
 20. [Register for Meetups](https://www.youtube.com/watch?v=d4nUU8vCT8U) 2017/9/4
 21. [Fetching User State On Login](https://www.youtube.com/watch?v=BZ9FcjsA9ZU) 2017/9/7
-22. [Finishing Our Project](https://www.youtube.com/watch?v=0RoT17Xwj24) 2017/9/11
+22. [Finishing Our Project](https://www.youtube.com/watch?v=0RoT17Xwj24) 2017/9/11 split store to pieces
