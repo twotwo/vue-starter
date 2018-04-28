@@ -37,7 +37,7 @@ $ npm run dev
 ### 2.1 初始参数
 
 ```bash
-➜  vuetify-tutorials git:(master) ✗ proxychains4 vue init vuetifyjs/webpack -y
+➜  vuetify-tutorials git:(master) ✗ vue init vuetifyjs/webpack -y
 ? Generate project in current directory? Yes
 ? Project name vuetify-tutorials
 ? Project description A Vue.js project
