@@ -7,7 +7,7 @@ import CreateMeetup from '@/components/Meetup/CreateMeetup.vue'
 import Profile from '@/components/User/Profile.vue'
 import Signin from '@/components/User/Signin.vue'
 import Signup from '@/components/User/Signup.vue'
-import AuthGuard from './auth-guard.js'
+import AuthGuard from '@/auth-guard.js'
 
 Vue.use(Router)
 

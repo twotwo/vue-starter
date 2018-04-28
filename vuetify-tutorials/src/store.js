@@ -76,6 +76,8 @@ export const store = new Vuex.Store({
       })
     },
     signUserUp({ commit }, payload) {
+      commit('setLoading', true)
+      commit('clearError')
       // call server create user method
       // . then ( user ==> user.id...
       const newUser = {
@@ -87,6 +89,8 @@ export const store = new Vuex.Store({
       commit('setUser', newUser)
     },
     signUserIn({ commit }, payload) {
+      commit('setLoading', true)
+      commit('clearError')
       // call server signIn method
       // . then ( user ==> user.id...
       const newUser = {

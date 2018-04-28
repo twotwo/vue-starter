@@ -219,6 +219,8 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 * Components/[buttons](https://vuetifyjs.com/zh-Hans/components/buttons) raised
 * line 33,34 v-btn 和 input
 
+[上传按钮控件@github](https://github.com/jannhama/vuetify-upload-btn) 后续可以参考
+
 ## 8. 用户与权限
 
 ### 8.1 用户注册
