@@ -56,3 +56,25 @@ YouTube 视频[地址](https://www.youtube.com/watch?v=LW9yIR4GoVU)
       }
     }
 ```
+
+## 5. 使用 mutations 来更新对象
+
+```html
+    <button @click="pressed">Increment Counter</button>
+```
+
+```javascript
+    mutations: {
+      increment(state, payload) {
+        state.count += payload;
+      }
+    },
+```
+
+```javascript
+    methods: {
+      pressed() {
+        store.commit('increment', 10);
+      }
+    }
+```

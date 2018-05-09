@@ -11,6 +11,7 @@
     <h1>{{ welcome }}</h1>
     <h2>{{ message }}</h2>
     <h3>{{ count }}</h3>
+    <button @click="pressed">Increment Counter</button>
   </div>
 </body>
 <script>
@@ -19,7 +20,11 @@
       message: 'Hello From Vuex',
       count: 0
     },
-    mutations: {},
+    mutations: {
+      increment(state, payload) {
+        state.count += payload;
+      }
+    },
     actions: {},
     getters: {
       message(state) {
@@ -43,6 +48,11 @@
       },
       count() {
         return store.getters.counter;
+      }
+    },
+    methods: {
+      pressed() {
+        store.commit('increment', 10);
       }
     }
   });
