@@ -38,3 +38,21 @@ YouTube 视频[地址](https://www.youtube.com/watch?v=LW9yIR4GoVU)
 ```html
     <h2>{{ message }}</h2>
 ```
+
+## 4. 使用 getters 访问对象
+
+```javascript
+    getters: {
+      message(state) {
+        return state.message.toUpperCase();
+      }
+    }
+```
+
+```javascript
+    computed: {
+      message() {
+        return store.getters.message;
+      }
+    }
+```
