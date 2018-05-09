@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vuex"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ welcome }}</h1>
+    <h2></h2>
+    <h3></h3>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        welcome: 'Hello, World'
+      }
+    }
+  });
+</script>
+
+</html>
