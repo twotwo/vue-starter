@@ -78,3 +78,27 @@ YouTube 视频[地址](https://www.youtube.com/watch?v=LW9yIR4GoVU)
       }
     }
 ```
+
+## 6. 使用 actions 来更新对象
+
+```javascript
+    mutations: { //syncronous
+      increment(state, payload) {
+        state.count += payload;
+      }
+    },
+    actions: { //asyncronous
+      increment(state, payload) {
+        state.commit('increment', payload);
+      }
+    },
+```
+
+```javascript
+    methods: {
+      pressed() {
+        // store.commit('increment', 10);
+        store.dispatch('increment', 20);
+      }
+    }
+```

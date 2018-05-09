@@ -20,12 +20,16 @@
       message: 'Hello From Vuex',
       count: 0
     },
-    mutations: {
+    mutations: { //syncronous
       increment(state, payload) {
         state.count += payload;
       }
     },
-    actions: {},
+    actions: { //asyncronous
+      increment(state, payload) {
+        state.commit('increment', payload);
+      }
+    },
     getters: {
       message(state) {
         return state.message.toUpperCase();
@@ -52,7 +56,8 @@
     },
     methods: {
       pressed() {
-        store.commit('increment', 10);
+        // store.commit('increment', 10);
+        store.dispatch('increment', 20);
       }
     }
   });
