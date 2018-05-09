@@ -17,3 +17,24 @@ YouTube 视频[地址](https://www.youtube.com/watch?v=LW9yIR4GoVU)
     getters: {}
   });
 ```
+
+## 3. 访问 state 中的对象
+
+```javascript
+    state: {
+      message: 'Hello From Vuex',
+      count: 0
+    },
+```
+
+```javascript
+    computed: {
+      message() {
+        return store.state.message;
+      }
+    }
+```
+
+```html
+    <h2>{{ message }}</h2>
+```
