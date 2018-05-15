@@ -3,8 +3,8 @@
 
 <!-- file_name=index && landslide slide-${file_name}.md --relative --copy-theme -d ${file_name}.html -->
 
- * V1.0
- * liyan 2018-04-28
+ * V1.1
+ * liyan 2018-05-02
 
 ## 利用 Vuetify 这个 UI 组件，快速构建 基于 Vue.js 的 Web 工程 …
 
@@ -23,7 +23,7 @@
 
 **语义化工具箱**
 
-* 像讲话一样编写的组件，让 coding 变得更加顺畅
+* 像说话一样的编写组件，让 coding 变得更加顺畅
 
 **强大的支持**
 
@@ -47,6 +47,8 @@
 
 * [Component API Overview](https://vuetifyjs.com/zh-Hans/components/api-explorer)
 
+.notes: 扩展 - 网站的配色设计
+
 ---
 
 ## Cookbook
@@ -63,8 +65,6 @@
 * 主题颜色 `src/main.js` <= 设置主题颜色; `src/App.vue` <= 颜色使用主题名称 //见下页代码
 * 动态菜单 `computed.menuItems`、`navigation-drawer & toolbar: v-for`
 * 登录验证
-<!-- * 学习如何在Windows下[使用 Git Bash](./git-bash.html)  -->
-
 
 ---
 

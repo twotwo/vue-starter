@@ -1,6 +1,7 @@
 # Vue.js + Vuetify + MySQL 项目开发教程
 
 ## 1. 需求与概要设计
+
 > 做一个聚会管理网站，管理员可以添加聚会信息；普通用户可以查看聚会信息。
 
 ![业务需求草图](./tutorials/planning-the-app.jpg)
@@ -21,6 +22,7 @@
 * 聚会信息表
 
 ## 2. 创建项目
+
 参考
 
 * [webpack@github](https://github.com/vuetifyjs/webpack)
@@ -28,6 +30,7 @@
 
 ```bash
 $ npm install -g vue-cli #全局安装
+ ...
 $ vue init vuetifyjs/webpack my-project
 $ cd my-project
 $ npm install
@@ -66,6 +69,7 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
 ```
 
 ### 2.2 前端页面说明
+
 ```bash
 ➜  vuetify-tutorials git:(master) ✗ ll src
 App.vue # 页面全局显示
@@ -80,7 +84,7 @@ router.js <== router/index.js # 路由
 ### 3.1 网站布局(layout)
 
 * `src/App.vue` app: {navigation, toolbar, content, footer}
-* Layout/[Default application markup](https://vuetifyjs.com/zh-Hans/layout/pre-defined) 
+* Layout/[Default application markup](https://vuetifyjs.com/zh-Hans/layout/pre-defined)
 
 ### 3.2 网站颜色和主题
 
@@ -126,11 +130,11 @@ router.js <== router/index.js # 路由
 
 参考 [vue-router](https://router.vuejs.org/zh-cn/)
 
-* `src/App.vue` 添加 <router-view/>
+* `src/App.vue` 添加 `<router-view/>`
 * `src/routes.js` 不用# => `mode: 'history'`, 设置web context => `base: '/meetup'`
 * `config/index.js` 设置web context => `assetsPublicPath: '/meetup'`
 
-http://localhost:8080/meetup
+<http://localhost:8080/meetup>
 
 ### 4.4 菜单中添加地址
 
@@ -210,6 +214,7 @@ Vuex.Store: state, mutations, actions, getters
 Add in `src/components/Meetup/CreateMeetup.vue`
 
 #### 7.3.2 添加日期管道
+
 * create `src/date-filter.js`
 * register in `src/main.js`
 * add pipeline in `src/components/Meetup/Meetups.vue`/`src/components/Meetup/Meetup.vue`
@@ -239,7 +244,7 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 ### 8.3 避免未授权访问
 
 * create `src/auth-guard.js`
-* `src/router.js`: add ` beforeEnter: AuthGuard` for '/meetup/new' & '/profile'
+* `src/router.js`: add `beforeEnter: AuthGuard` for '/meetup/new' & '/profile'
 * test: user: null in `src/store.js`
 * `src/App.vue`: add logout menu; `methods.onLogout`
 * `src/store.js`: `Vuex.actions.logout`
@@ -253,28 +258,28 @@ Add in `src/components/Meetup/CreateMeetup.vue`
 
 ### Authentication
 
-12. [A Signup View & Form with Firebase](https://www.youtube.com/watch?v=MpiMn5Bcmdg) 2017/8/7 `npm i firebase --save`
+#### 12. [A Signup View & Form with Firebase](https://www.youtube.com/watch?v=MpiMn5Bcmdg) 2017/8/7 `npm i firebase --save`
 
 * [创建项目](./tutorials/firebase-create-project.png)
 * [认证方法](./tutorials/firebase-authentication-method.png)
 * [认证配置](./tutorials/firebase-authentication-websetup.png) register in `src/main.js`
 * `src/components/User/Signup.vue` 页面
 
-13. [Adding Firebase Authentication](https://www.youtube.com/watch?v=MdZCRP2uKdE) 2017/8/10
+#### 13. [Adding Firebase Authentication](https://www.youtube.com/watch?v=MdZCRP2uKdE) 2017/8/10
 
 * `src/components/User/Signup.vue` 添加用户信息到 `src/store.js` 和 firebase
 * `src/App.vue` 登录后 隐藏 Signin `computed.menuItems`
 
-14. [Auth State Feedback with Vuex](https://www.youtube.com/watch?v=fuhhQFt5Ybk) 2017/8/14
+#### 14. [Auth State Feedback with Vuex](https://www.youtube.com/watch?v=fuhhQFt5Ybk) 2017/8/14
 
-16. [Prevent unauthenticated Access](https://www.youtube.com/watch?v=XljsGqsZyL4) 2017/8/21 autoSignIn
+#### 16. [Prevent unauthenticated Access](https://www.youtube.com/watch?v=XljsGqsZyL4) 2017/8/21 autoSignIn
 
 * `src/main.js` firebase.auth().onAuthStateChanged
 * `src/store.js` `Vuex.actions.autoSignIn`
 
 ### DB Actions
 
-15. [Storing Data on Firebase](https://www.youtube.com/watch?v=xwx4ua056Nc) 2017/8/17
+#### 15. [Storing Data on Firebase](https://www.youtube.com/watch?v=xwx4ua056Nc) 2017/8/17
 
 ## 附录2-参考文献
 
