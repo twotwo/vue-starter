@@ -16,34 +16,34 @@
 </template>
 
 <script>
-    import './index.less';
-    import Hello from '@components/hello/';
-    import test from '@src/lib/test';
+import "./index.less";
+import Hello from "@components/hello/";
+import test from "@src/lib/test";
 
-    import { mapActions, mapGetters } from 'vuex';
-    export default{
-        data () {
-            return {
-                title: 'vuejs 2 + webpack 3'
-            };
-        },
-
-        computed: {
-            ...mapGetters({
-                curTime: 'getCurTime'
-            })
-        },
-
-        methods: {
-            ...mapActions(['changeTime'])
-        },
-
-        components: {
-            Hello
-        },
-
-        mounted () {
-            test();
-        }
+import { mapActions, mapGetters } from "vuex";
+export default {
+  data() {
+    return {
+      title: "vuejs 2 + webpack 4"
     };
+  },
+
+  computed: {
+    ...mapGetters({
+      curTime: "getCurTime"
+    })
+  },
+
+  methods: {
+    ...mapActions(["changeTime"])
+  },
+
+  components: {
+    Hello
+  },
+
+  mounted() {
+    test();
+  }
+};
 </script>
