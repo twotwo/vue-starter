@@ -4,12 +4,6 @@
 
 <https://github.com/dwqs/vue-startup>
 
-## 默认配置
-
-在 Webpack 4 中，不再强制要求指定 entry 和 output 路径。
-
-webpack 4 会默认 entry 为 ./src，output 为 ./dist
-
 ## `npm run dev` 启动顺序
 
 ### 1. scripts.dev@package.json
@@ -18,15 +12,27 @@ webpack 4 会默认 entry 为 ./src，output 为 ./dist
 "dev": "npx cross-env NODE_ENV=development node ./build/dev-server.js",
 ```
 
+`node ./build/dev-server.js` 直接启动避免 Ctr+c 抛异常
+
 ### 2. build/dev-server.js
 
-1. 读取开发配置信息: build/webpack.dev.config.js
-2. 读取开发服务端口: config/index.js
-3. 启动开发服务
+1.读取开发配置信息: build/webpack.dev.config.js
+
+2.读取开发服务端口: config/index.js
+
+3.启动开发服务
 
 ### 3. build/webpack.dev.config.js
 
-```bash
-src/index.html
-src/page/index.js
+1.合并 `build/webpack.base.config.js` 中的配置
+
+1.[entry](https://webpack.js.org/concepts/entry-points/) `src/page/index.js`
+
+1.[output](https://webpack.js.org/concepts/output/) `config.assetsRoot` == `./dist`
+
+1.[plugins](https://webpack.js.org/concepts/plugins/) `base.config.plugins.HtmlWebpackPlugin` == `src/index.html`
+
+1.[module](https://webpack.js.org/concepts/modules/)
+
+```javascript
 ```
