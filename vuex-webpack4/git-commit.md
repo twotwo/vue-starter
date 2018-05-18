@@ -15,3 +15,14 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 ```
 
 <http://marionebl.github.io/commitlint/#/guides-local-setup>
+
+## Message Type
+
+```bash
+➜  vuex-webpack4 git:(master) ✗ echo 'foo: bar' |npx commitlint
+⧗   input:
+foo: bar
+
+✖   type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test] [type-enum]
+✖   found 1 problems, 0 warnings
+```
