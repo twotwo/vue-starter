@@ -23,7 +23,8 @@ const Info = () =>
   import(/* webpackChunkName: "info" */ "../general/info/index")
 const Test = () =>
   import(/* webpackChunkName: "test" */ "../general/test/index")
-const App = () => import(/* webpackChunkName: "main" */ "../general/app/index")
+// const App = () => import(/* webpackChunkName: "main" */ "../general/app/index")
+const App = () => import(/* webpackChunkName: "main" */ "../general/vuex/Index")
 
 const Outer = { template: "<router-view></router-view>" }
 
