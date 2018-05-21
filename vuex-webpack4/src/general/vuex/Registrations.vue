@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   // props: ["registrations"],
   methods: {
@@ -26,14 +27,18 @@ export default {
       this.$store.state.registrations.splice(this.$store.state.registrations.indexOf(registration), 1);
     }
   },
-  computed: {
-    registrations () {
-      return this.$store.state.registrations;
-    },
-    total () {
-      return this.$store.state.registrations.length;
-    }
-  }
+  // computed: {
+  //   registrations () {
+  //     return this.$store.getters.registrations;
+  //   },
+  //   total () {
+  //     return this.$store.getters.totalRegistrations;
+  //   }
+  // }
+  computed: mapGetters({
+    registrations: 'registrations',
+    total: 'totalRegistrations'
+  })
 };
 </script>
 

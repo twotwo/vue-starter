@@ -66,3 +66,46 @@ $ vue init dwqs/vue-startup vuex-webpack4
 ### 3.3 修改：注册后不显示
 
 * src/general/vuex/Registration.vue // computed.users.filter
+
+### 3.4 改进的地方
+
+* 用户信息和注册信息的数据都来自 src/general/vuex/store.js
+* Index.vue 的内容进行了极大简化
+
+## 4. Getters
+
+把数据获取都放到这里。加入有多个组件都需要读取数据，读取逻辑写一次就够了
+
+### 4.1 未注册用户
+
+* src/general/vuex/store.js //getters.unregisterUsers
+* src/general/vuex/Registration.vue // return this.$store.getters.unregisterUsers;
+
+### 4.2 注册用户及注册用户数
+
+* src/general/vuex/store.js //getters.registrations & getters.totalRegistrations
+* src/general/vuex/Registrations.vue
+
+### 4.3 mapGetters
+
+* src/general/vuex/Registrations.vue //import { mapGetters } from 'vuex';
+
+```javascript
+computed: mapGetters({
+  registrations: "registrations",
+  total: "totalRegistrations"
+})
+```
+
+`npm i --save-dev babel-preset-stage-2`
+
+```javascript
+computed: {
+  ...mapGetters({
+    registrations: "registrations",
+    total: "totalRegistrations"
+  })
+}
+```
+
+.babelrc // presets: 'stage-2'

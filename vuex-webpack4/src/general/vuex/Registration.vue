@@ -15,9 +15,7 @@ export default {
   computed: {
     // unregisteredUsers
     users () {
-      return this.$store.state.users.filter(user => {
-        return !user.registered;
-      });
+      return this.$store.getters.unregisterUsers;
     }
   },
   methods: {
