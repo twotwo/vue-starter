@@ -38,12 +38,14 @@ $ vue init dwqs/vue-startup vuex-webpack4
 
 ### 2.1 add
 
-* src/general/vuex/Registration.vue
-* src/general/vuex/Registrations.vue
-* src/general/vuex/Index.vue
+* src/general/vuex/Index.vue // 维护用户信息和注册信息的数据，和获取相关数据的方法；
+* src/general/vuex/Registration.vue // 用户注册的交互和逻辑实现：显示 Index 中的未注册用户(props: ["users"])，调用注册方法(this.$emit("userRegistered", user))
+* src/general/vuex/Registrations.vue // 取消注册的交互及逻辑
 
 ### 2.2 modify
 
 引入内容，更新路由
 
 * src/page/index.js `const App = () => import(/* webpackChunkName: "main" */ "../general/vuex/Index")`
+
+## 3. State & Store

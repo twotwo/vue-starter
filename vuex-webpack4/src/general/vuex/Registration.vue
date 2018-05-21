@@ -1,10 +1,10 @@
 <template>
   <div id="registration">
-    <h3>Register here</h3>
+    <h3>请注册</h3>
     <hr>
     <div class="row" v-for="user in users" :key="user.id">
       <h4>{{ user.name }}</h4>
-      <button @click="registerUser(user)">Register</button>
+      <button @click="registerUser(user)">注册</button>
     </div>
   </div>
 </template>
