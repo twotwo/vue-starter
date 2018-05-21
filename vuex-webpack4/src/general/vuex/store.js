@@ -55,9 +55,19 @@ export const store = new Vuex.Store({
       user.registered = false
       // find registration's index by id
       const index = state.registrations.findIndex(registration => {
-        return (registration.userId = userId)
+        return registration.userId === userId
       })
       state.registrations.splice(index, 1)
+    }
+  },
+  actions: {
+    register (context, userId) {
+      setTimeout(() => {
+        context.commit("register", userId)
+      }, 1000)
+    },
+    unregister (context, payload) {
+      context.commit("unregister", payload)
     }
   }
 })

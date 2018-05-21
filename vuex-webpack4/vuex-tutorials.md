@@ -119,7 +119,25 @@ computed: {
 * src/general/vuex/store.js // mutations.register(state, userId)
 * src/general/vuex/Registration.vue // methods.registerUser: this.$store.commit('register', user.id)
 
-### 5.1 注册信息注销
+### 5.2 注册信息注销
 
 * src/general/vuex/store.js // mutations.unregister(state, payload)
 * src/general/vuex/Registrations.vue // methods.unregister: this.$store.commit({type:...})
+
+## 6. Actions
+
+支持异步，actions 方法中可以加入异步逻辑
+
+### 6.1 用户注册
+
+* src/general/vuex/store.js // actions.register(state, userId): context.commit("register", userId)
+* src/general/vuex/Registration.vue // methods.registerUser: this.$store.dispatch('register', user.id)
+
+### 6.2 注册信息注销
+
+* src/general/vuex/store.js // actions.unregister(state, payload): context.commit({type:...})
+* src/general/vuex/Registrations.vue // methods.unregister: this.$store.dispatch({type:...})
+
+### 6.3 Actions 的优势
+
+* src/general/vuex/store.js // actions.register(state, userId) 增加一个超时设置

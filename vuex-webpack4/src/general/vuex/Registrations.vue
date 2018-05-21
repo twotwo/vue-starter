@@ -19,7 +19,7 @@ export default {
   // props: ["registrations"],
   methods: {
     unregister (registration) {
-      this.$store.commit({
+      this.$store.dispatch({
         type: 'unregister',
         userId: registration.userId
       })
