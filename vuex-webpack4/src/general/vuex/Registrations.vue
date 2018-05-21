@@ -19,22 +19,13 @@ export default {
   // props: ["registrations"],
   methods: {
     unregister (registration) {
-      // this.$emit("userUnregistered", registration);
-      const user = this.$store.state.users.find(user => {
-        return user.id === registration.userId;
-      });
-      user.registered = false;
-      this.$store.state.registrations.splice(this.$store.state.registrations.indexOf(registration), 1);
+      this.$store.commit({
+        type: 'unregister',
+        userId: registration.userId
+      })
     }
   },
-  // computed: {
-  //   registrations () {
-  //     return this.$store.getters.registrations;
-  //   },
-  //   total () {
-  //     return this.$store.getters.totalRegistrations;
-  //   }
-  // }
+
   computed: mapGetters({
     registrations: 'registrations',
     total: 'totalRegistrations'

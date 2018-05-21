@@ -109,3 +109,17 @@ computed: {
 ```
 
 .babelrc // presets: 'stage-2'
+
+## 5. Mutations
+
+把数据更新的逻辑也都放到 store 中
+
+### 5.1 用户注册
+
+* src/general/vuex/store.js // mutations.register(state, userId)
+* src/general/vuex/Registration.vue // methods.registerUser: this.$store.commit('register', user.id)
+
+### 5.1 注册信息注销
+
+* src/general/vuex/store.js // mutations.unregister(state, payload)
+* src/general/vuex/Registrations.vue // methods.unregister: this.$store.commit({type:...})
