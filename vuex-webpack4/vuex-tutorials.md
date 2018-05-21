@@ -49,3 +49,20 @@ $ vue init dwqs/vue-startup vuex-webpack4
 * src/page/index.js `const App = () => import(/* webpackChunkName: "main" */ "../general/vuex/Index")`
 
 ## 3. State & Store
+
+### 3.1 把用户信息和注册信息的数据挪到 state 中
+
+* src/general/vuex/store.js // 把 Index 中的数据放到 state 中
+* src/page/index.js //引入 store - import { store } from "../general/vuex/store"
+* src/general/vuex/Registration.vue // computed.users， 直接从 store.state 获取，替换 Index.unregisteredUsers
+* src/general/vuex/Registrations.vue // computed.registrations， 直接从 store.state 获取，替换 Index.registrations
+
+### 3.2 去掉 Index.vue 传入的数据和方法
+
+* src/general/vuex/Index.vue // <app-registration></app-registration>
+* src/general/vuex/Registration.vue // registerUser ==> Index.userRegistered 直接调用 store.state
+* src/general/vuex/Registrations.vue // unregister ==> Index.userUnregistered
+
+### 3.3 修改：注册后不显示
+
+* src/general/vuex/Registration.vue // computed.users.filter

@@ -5,7 +5,8 @@ import "babel-polyfill"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import { sync } from "vuex-router-sync"
-import store from "../vuex/index"
+// import store from "../vuex/index"
+import { store } from "../general/vuex/store"
 
 require("es6-promise").polyfill()
 

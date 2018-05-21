@@ -11,11 +11,23 @@
 
 <script>
 export default {
-  props: ["users"],
+  // props: ["users"],
+  computed: {
+    // unregisteredUsers
+    users () {
+      return this.$store.state.users.filter(user => {
+        return !user.registered;
+      });
+    }
+  },
   methods: {
     registerUser (user) {
-      this.$emit("userRegistered", user);
+      // this.$emit("userRegistered", user);
       user.registered = true;
+      const date = new Date();
+      this.$store.state.registrations.push({
+        userId: user.id, name: user.name, date: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+      });
     }
   }
 };

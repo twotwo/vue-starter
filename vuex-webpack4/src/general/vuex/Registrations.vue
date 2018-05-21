@@ -1,13 +1,13 @@
 <template>
   <div id="registrations">
     <div class="summary">
-      <h3>Registrations</h3>
-      <h5>Total: {{ total }}</h5>
+      <h3>注册单</h3>
+      <h5>注册人数 {{ total }}</h5>
     </div>
     <hr>
     <div class="row" v-for="registration in registrations" :key="registration.id">
       <h4>{{ registration.name }}</h4>
-      <span @click="unregister(registration)">(Unregister)</span>
+      <span @click="unregister(registration)">(注销)</span>
       <div class="date">{{ registration.date }}</div>
     </div>
   </div>
@@ -15,15 +15,23 @@
 
 <script>
 export default {
-  props: ["registrations"],
+  // props: ["registrations"],
   methods: {
     unregister (registration) {
-      this.$emit("userUnregistered", registration);
+      // this.$emit("userUnregistered", registration);
+      const user = this.$store.state.users.find(user => {
+        return user.id === registration.userId;
+      });
+      user.registered = false;
+      this.$store.state.registrations.splice(this.$store.state.registrations.indexOf(registration), 1);
     }
   },
   computed: {
+    registrations () {
+      return this.$store.state.registrations;
+    },
     total () {
-      return this.registrations.length;
+      return this.$store.state.registrations.length;
     }
   }
 };
