@@ -57,7 +57,7 @@
     </v-content>
 
     <!-- footer here -->
-    <v-footer app><strong>Copyright</strong> © 2018.</v-footer>
+    <span class="primary--text flex text-xs-center">&copy; <strong>Copyright</strong> 2018</span>
 
   </v-app>
 </template>

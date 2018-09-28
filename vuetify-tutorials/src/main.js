@@ -38,6 +38,6 @@ new Vue({
   // eslint-disable-next-line
   created() {
     // On Auth State Changed
-
+    console.log('load page...')
   }
 })

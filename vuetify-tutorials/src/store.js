@@ -50,7 +50,16 @@ export const store = new Vuex.Store({
      */
     setUser(state, payload) {
       state.user = payload
-    }
+    },
+    setLoading (state, payload) {
+      state.loading = payload
+    },
+    setError (state, payload) {
+      state.error = payload
+    },
+    clearError (state) {
+      state.error = null
+}
   },
   actions: {
     createMeetup({ commit, getters }, payload) {
