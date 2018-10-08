@@ -5,15 +5,13 @@
   "author": "twotwo <twotwo.li@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepush": "npm run ilint -q",
     "dll": "npx webpack --config webpack.dll.config.js",
     "postinstall": "npm -s run dll",
     "dev": "node ./build/dev-server.js",
     "dev:quit-error": "npx cross-env NODE_ENV=development node ./build/dev-server.js",
     "build": "npx rimraf dist && npx cross-env NODE_ENV=production npx webpack --config ./build/webpack.prod.config.js --hide-modules",
     "ilint": "npx eslint src/**/*.js src/**/*.vue",
-    "fix": "npx eslint --fix src/**/*.js src/**/*.vue",
-    "commitmsg": "npx commitlint -e"
+    "fix": "npx eslint --fix src/**/*.js src/**/*.vue"
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -51,7 +49,6 @@
     "eslint-plugin-vue-libs": "^2.1.0",
     "happypack": "^5.0.0-beta.1",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^0.14.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
@@ -80,6 +77,12 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npx commitlint -e",
+      "pre-push": "npm run ilint -q"
     }
   }
 }
