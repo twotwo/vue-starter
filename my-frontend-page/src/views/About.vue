@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About Me</h1>
+    <Skills />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Skills from "@/components/Skills.vue";
+
+export default {
+  name: "about",
+  components: {
+    Skills
+  }
+};
+</script>

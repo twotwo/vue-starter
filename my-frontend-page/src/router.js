@@ -14,11 +14,6 @@ export default new Router({
       component: Home
     },
     {
-      path: "/pages",
-      name: "pages",
-      component: () => import("./views/Pages.vue")
-    },
-    {
       path: "/about",
       name: "about",
       // route level code-splitting
@@ -26,6 +21,16 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "/demos",
+      name: "demos",
+      component: () => import("./views/Demos.vue")
+    },
+    {
+      path: "/pages",
+      name: "pages",
+      component: () => import("./views/Pages.vue")
     }
   ]
 });
