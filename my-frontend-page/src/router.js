@@ -26,11 +26,6 @@ export default new Router({
       path: "/demos",
       name: "demos",
       component: () => import("./views/Demos.vue")
-    },
-    {
-      path: "/pages",
-      name: "pages",
-      component: () => import("./views/Pages.vue")
     }
   ]
 });
