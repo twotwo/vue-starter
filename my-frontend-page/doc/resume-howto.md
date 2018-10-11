@@ -41,7 +41,7 @@
 ### Summary/Objective
 
 - Summary
-5+ 年工程师请写简历摘要，重点是工作中的shining moment
+5+ 年工程师请写简历摘要(大致对标某些模板中的“自我评价”)，重点是工作中的shining moment
 
 - Objective
 应届生或打算转岗的写一下求职目标。
@@ -63,6 +63,8 @@
 - 把一些面试官可能感兴趣的内容放到网上，比如可以是自己的博客、Github的主页等等
 
 ### Cover Letter
+
+- 
 
 ## Page
 

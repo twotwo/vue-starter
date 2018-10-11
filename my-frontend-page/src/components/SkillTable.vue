@@ -1,15 +1,10 @@
 <template>
   <div class="skills">
-    <h3>Skills</h3>
+    <h3>How to put skills on a software engineer resume?</h3>
     <ul>
-      <li>Skilled in teamwork, leadership, creative thinking.</li>
-      <li>Adept at data structures, problem solving, end-to-end coding.</li>
-      <li>Passion for Coding.</li>
-    </ul>
-    <h3>Experience</h3>
-    <ul>
-      <li><em>带领团队快速完成项目开发</em></li>
-      <li><em>支持线上服务高可用</em></li>
+      <li>整理自身技能表(见下表)</li>
+      <li>检索目标JD中的Skills Keywords，与技能表进行匹配</li>
+      <li>把匹配到的技能放入 Skills 和 Experience 中</li>
     </ul>
     <h3>Skill Table</h3>
     <table>
